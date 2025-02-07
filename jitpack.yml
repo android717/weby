@@ -2,7 +2,8 @@ jdk:
   - openjdk17
 
 before_install:
-  - chmod +x gradlew
+  - ./scripts/prepareJitpackEnvironment.sh
 
 install:
-  - ./gradlew clean build publishToMavenLocal --stacktrace
+  - FILE="-Dfile=weby-release.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.0 -Dpackaging=aar -DgeneratePom=true
