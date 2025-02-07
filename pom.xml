@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.android717</groupId>
-    <artifactId>com.ravix.weby</artifactId>
-    <version>1.4</version>
+    <artifactId>weby</artifactId>
+    <version>1.7</version>
     <packaging>aar</packaging>
 
     <name>Ravix Weby</name>
