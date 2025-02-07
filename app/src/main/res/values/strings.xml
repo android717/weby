@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">XLibrary</string>
+    <string name="open_web">open_web</string>
 </resources>
