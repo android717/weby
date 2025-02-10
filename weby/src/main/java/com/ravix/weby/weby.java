@@ -73,12 +73,24 @@ public class weby extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void initWeb() {
         webView = findViewById(R.id.webView);
         WebSettings webSettings = webView.getSettings();
         String webUrl = getIntent().getStringExtra(EXTRA_URL);
+
+
+
+        Intent intent = getIntent();
+        Uri data = intent.getData();
+
+        if (data != null) {
+            String url = data.toString();
+
+            webUrl = url;
+        }
 
         webSettings.setJavaScriptEnabled(true);
         webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
