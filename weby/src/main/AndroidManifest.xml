@@ -11,25 +11,13 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- added this -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
 
-    <application tools:node="merge">
-
+    <application>
         <activity
             android:name=".weby"
             android:exported="true">
-
-
-            <intent-filter android:autoVerify="true" tools:node="merge">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="https" />
-                <data android:host="twebsitepro.web.app" />
-            </intent-filter>
         </activity>
     </application>
 

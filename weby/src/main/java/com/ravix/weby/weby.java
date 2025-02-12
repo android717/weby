@@ -44,7 +44,8 @@ public class weby extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG, "onCreate: ");
+         setTheme(R.style.LibraryDefaultTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
