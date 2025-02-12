@@ -6,4 +6,4 @@ before_install:
 
 install:
   - FILE="-Dfile=weby-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.4 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.5 -Dpackaging=aar -DgeneratePom=true
