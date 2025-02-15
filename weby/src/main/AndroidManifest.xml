@@ -17,6 +17,7 @@
     <application>
         <activity
             android:name=".weby"
+            android:hardwareAccelerated="true"
             android:exported="true">
         </activity>
     </application>
