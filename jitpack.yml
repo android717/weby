@@ -2,12 +2,24 @@ jdk:
   - openjdk17
 
 before_install:
+  - chmod +x ./scripts/prepareJitpackEnvironment.sh
   - ./scripts/prepareJitpackEnvironment.sh
 
 build:
   commands:
     - ./gradlew assembleRelease
+    - mvn install:install-file -Dfile=app/build/outputs/aar/app-release.aar -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.6 -Dpackaging=aar -DgeneratePom=true
 
-install:
-  - FILE="-Dfile=weby-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.6 -Dpackaging=aar -DgeneratePom=true
+#jdk:
+#  - openjdk17
+#
+#before_install:
+#  - ./scripts/prepareJitpackEnvironment.sh
+#
+#build:
+#  commands:
+#    - ./gradlew assembleRelease
+#
+#install:
+#  - FILE="-Dfile=weby-release.aar"
+#  - mvn install:install-file $FILE -DgroupId=com.github.android717 -DartifactId=weby -Dversion=1.1.6 -Dpackaging=aar -DgeneratePom=true
